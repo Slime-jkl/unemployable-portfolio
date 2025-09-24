@@ -307,41 +307,6 @@
 
 
 <script>
-
-
-let totalSeconds = 3 * 60; // 3 minutes
-
-const mTens = document.getElementById('mTens');
-const mOnes = document.getElementById('mOnes');
-const sTens = document.getElementById('sTens');
-const sOnes = document.getElementById('sOnes');
-
-function updateTimer() {
-  let minutes = Math.floor(totalSeconds / 60);
-  let seconds = totalSeconds % 60;
-
-  let mT = Math.floor(minutes / 10);
-  let mO = minutes % 10;
-  let sT = Math.floor(seconds / 10);
-  let sO = seconds % 10;
-
-  mTens.textContent = mT;
-  mOnes.textContent = mO;
-  sTens.textContent = sT;
-  sOnes.textContent = sO;
-}
-
-updateTimer();
-
-const interval = setInterval(() => {
-  if (totalSeconds <= 0) {
-    clearInterval(interval);
-    return;
-  }
-  totalSeconds--;
-  updateTimer();
-}, 1000);
-
 const drawer = document.getElementById('projectDrawer');
 const drawerBody = document.getElementById('drawerBody');
 const drawerClose = document.getElementById('drawerClose');
